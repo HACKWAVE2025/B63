@@ -18,7 +18,7 @@ export default function VoiceStressDetector() {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       mediaRecorderRef.current = new MediaRecorder(stream);
       mediaRecorderRef.current.start();
-      setRecording(true);
+      setRecording(false);
       setMessage('Recording... Speak now.');
 
       mediaRecorderRef.current.ondataavailable = (event) => {
